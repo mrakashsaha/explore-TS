@@ -1,23 +1,19 @@
 "use strict";
-// Learn about function signature
-let newVar;
-newVar = "Akash";
-let add; //this is the signature part of a function
-add = (a, b) => {
-    return a + b;
-};
-console.log(add(2, 3));
-let calculation;
-calculation = (a, b, c) => {
-    if (c === "add") {
-        return a + b;
+class Player {
+    constructor(n, a, c) {
+        this.name = n;
+        this.age = a;
+        this.country = c;
     }
-    else {
-        return a - b;
+    play() {
+        console.log(`${this.name} from ${this.country} is playing now`);
     }
-};
-console.log(calculation(23, 23, "add"));
-let userDetails;
-userDetails = (nid, userInformation) => {
-    return 0;
-};
+}
+const player1 = new Player("Akash", 54, "BD");
+const player2 = new Player("Priyanka", 54, "BD");
+player1.play();
+player2.play();
+const players = [];
+players.push(player1);
+players.push(player2);
+console.log(players);

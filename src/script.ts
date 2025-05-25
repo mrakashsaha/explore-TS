@@ -1,51 +1,32 @@
-// Learn about function signature
+class Player {
+    name: string;
+    age: number;
+    country: string;
 
-let newVar: string;
-
-newVar = "Akash"
-
-
-let add: (x: number, y: number) => number;  //this is the signature part of a function
-
-
-add = (a: number, b: number) => {
-
-    return a + b;
-}
-
-console.log(add(2, 3))
-
-
-
-let calculation: (x: number, y: number, z: string) => number;
-
-
-calculation = (a: number, b: number, c: string) => {
-    if (c === "add") {
-        return a + b;
+    constructor (n:string, a: number, c: string) {
+        this.name = n;
+        this.age = a;
+        this.country = c;
     }
 
-    else {
-        return a - b;
+
+    play() {
+        console.log(`${this.name} from ${this.country} is playing now`);
     }
 }
 
 
-console.log(calculation(23, 23, "add"))
+const player1 = new Player("Akash", 54, "BD");
+const player2 = new Player("Priyanka", 54, "BD");
+
+player1.play();
+player2.play();
+
+const players : Player [] = [];
+
+players.push(player1)
+players.push(player2)
+
+console.log(players)
 
 
-
-let userDetails: (id: number | string, userInfo: {
-    name: string,
-    age: number,
-    isAdult: boolean,
-}) => number;
-
-
-userDetails = (nid: number | string, userInformation: {
-    name: string,
-    age: number,
-    isAdult: boolean,
-}) => {
-    return 0;
-}
