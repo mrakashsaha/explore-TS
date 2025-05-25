@@ -1,20 +1,18 @@
-// Learn about function type.
+// Custom type is called type alias in TS
 
-
-const myFunc = (a: string, b: string, c: string = "Akash") : void => {
-
-    console.log(c)
-    
-    console.log (`Hello ${a} and ${b}`)
+type stringOrNum = string | number
+type userType = {
+    name: string,
+    age: number,
 }
 
-
-myFunc('3', '4', "Priyanka")
-
-const myFunc2 = (a: string, b: string, c: string = "Akash") : string => {
-
-    return a + b + c;
+const userdetails = (
+    id: stringOrNum,
+    user: userType,
+) : void => {
+    console.log (`User Id is ${id}, name is ${user.name} and age is ${user.age}`)
 }
 
-
-console.log(myFunc2('3', '4', "Priyanka"))
+const sayHello = (user: userType) => {
+    console.log (`Hello ${user.age>50 ? "Sir" : "Mr."} ${user.name}`)
+}
