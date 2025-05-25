@@ -1,66 +1,39 @@
-// Explicit Declearation of type in variable.
+// Dynamic types
 
-let a: string;
+let unknown : any;
 
-let b: number;
+unknown = "Akash";
+console.log(unknown);
+unknown = 564;
+console.log(unknown);
+unknown = true;
+console.log(unknown);
 
-a="Akash Kumar Saha";
-b= 56;
-
-
-
-let x: string | boolean;
-
-x=true;
-
-
-// For array
-
-let arr: (number | string) [] = [23, 12, 12, 121, 1]
-
-arr.push(6);
-arr.push("Akash");
-// arr.push(true) Error will shown
-
-console.log(arr)
+// We should not normally use any type of variable. If we use any then its not a typescript, its work like normal javascript.
 
 
 
-// For object
+// Any type in Array
 
-let myObject : object;
+let myArray : any[] = [];
 
-myObject = {
- name: "Akash",
- age: 26, 
+myArray.push("Akash");
+myArray.push(true);
+myArray.push(454);
 
+console.log(myArray)
+
+
+// Anytype in Object;  
+
+let myObjectX : {
+    name: any, 
+    age: any,
 }
 
-
-console.log (myObject);
-
-
-
-// If I want a object follow a specific structure then 
-
-let myObject2 : {
-    name: string, 
-    age: number, 
-    isAdult: boolean,
+myObjectX = {
+    name: 4654, 
+    age: "Akash Kumar Saha"
 }
 
-
-myObject2 = {
-    name: "Akash Kumar Saha",
-    age: 22,
-    isAdult: true,
-}
-
-
-// Exception in javascript array is an object so,
-
-let myObjArray : object;
-
-myObjArray = [213, 213, 12, 12];
-
-console.log (myObjArray)
+console.log (myObjectX);

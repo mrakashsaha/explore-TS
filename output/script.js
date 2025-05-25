@@ -1,32 +1,23 @@
 "use strict";
-// Explicit Declearation of type in variable.
-let a;
-let b;
-a = "Akash Kumar Saha";
-b = 56;
-let x;
-x = true;
-// For array
-let arr = [23, 12, 12, 121, 1];
-arr.push(6);
-arr.push("Akash");
-// arr.push(true) Error will shown
-console.log(arr);
-// For object
-let myObject;
-myObject = {
-    name: "Akash",
-    age: 26,
+// Dynamic types
+let unknown;
+unknown = "Akash";
+console.log(unknown);
+unknown = 564;
+console.log(unknown);
+unknown = true;
+console.log(unknown);
+// We should not normally use any type of variable. If we use any then its not a typescript, its work like normal javascript.
+// Any type in Array
+let myArray = [];
+myArray.push("Akash");
+myArray.push(true);
+myArray.push(454);
+console.log(myArray);
+// Anytype in Object;  
+let myObjectX;
+myObjectX = {
+    name: 4654,
+    age: "Akash Kumar Saha"
 };
-console.log(myObject);
-// If I want a object follow a specific structure then 
-let myObject2;
-myObject2 = {
-    name: "Akash Kumar Saha",
-    age: 22,
-    isAdult: true,
-};
-// Exception in javascript array is an object so,
-let myObjArray;
-myObjArray = [213, 213, 12, 12];
-console.log(myObjArray);
+console.log(myObjectX);
