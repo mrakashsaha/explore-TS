@@ -1,72 +1,66 @@
-// const country = "I love Bangladesh";
-// console.log (country);
+// Explicit Declearation of type in variable.
+
+let a: string;
+
+let b: number;
+
+a="Akash Kumar Saha";
+b= 56;
 
 
 
+let x: string | boolean;
 
-let playerName = "Sakib Al Hasan";
-let age = 34;
+x=true;
 
-console.log (playerName, age);
 
-playerName = "56";   //Whenever I declear the playerName as a string it automatically consider the variable type as a string, it wont accept any value without string. that's why the error is showing
+// For array
 
- age = 50;
+let arr: (number | string) [] = [23, 12, 12, 121, 1]
 
-console.log(playerName, age)
+arr.push(6);
+arr.push("Akash");
+// arr.push(true) Error will shown
 
-// =========Exception ==========
-
-let playerName2;
-
-console.log(typeof(playerName2))  // as it is undefined asign
-
-playerName2 = "Akash Kumar Saha"
-playerName2 = 56;
-
-// If I do like this there won't show any error. If we decelar and defined at the same line then it will happend.
+console.log(arr)
 
 
 
-function multiply (a : number, b : number) {  // set type explicitly
+// For object
 
-    return a*b;
+let myObject : object;
+
+myObject = {
+ name: "Akash",
+ age: 26, 
 
 }
 
-console.log (multiply(12, 12));  // any string sent as parameter
 
-
-// Array 
-
-let fruits = ["apple", "banana", "orange"];
-
-fruits.push("Pineapple");   //If I sent number here TS will detect error
-
-console.log(fruits)
+console.log (myObject);
 
 
 
-let mixed = [46, "Akash", "Batash", true, {ok: "hello"}];
+// If I want a object follow a specific structure then 
 
-
-mixed.push("ok")
-
-mixed.push ( {
-    ok: "fine"
-})
-
-console.log(mixed)
-
-
-// Object
-
-
-let person = {
-    name: "Shakib Al Hasan",
-    age: 35,
-    isCaptain: true
+let myObject2 : {
+    name: string, 
+    age: number, 
+    isAdult: boolean,
 }
 
 
-person.name = "Virat Kholi";
+myObject2 = {
+    name: "Akash Kumar Saha",
+    age: 22,
+    isAdult: true,
+}
+
+
+// Exception in javascript array is an object so,
+
+let myObjArray : object;
+
+myObjArray = [213, 213, 12, 12];
+
+console.log (myObjArray)

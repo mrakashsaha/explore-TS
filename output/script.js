@@ -1,36 +1,32 @@
 "use strict";
-// const country = "I love Bangladesh";
-// console.log (country);
-let playerName = "Sakib Al Hasan";
-let age = 34;
-console.log(playerName, age);
-playerName = "56"; //Whenever I declear the playerName as a string it automatically consider the variable type as a string, it wont accept any value without string. that's why the error is showing
-age = 50;
-console.log(playerName, age);
-// =========Exception ==========
-let playerName2;
-console.log(typeof (playerName2)); // as it is undefined asign
-playerName2 = "Akash Kumar Saha";
-playerName2 = 56;
-// If I do like this there won't show any error. If we decelar and defined at the same line then it will happend.
-function multiply(a, b) {
-    return a * b;
-}
-console.log(multiply(12, 12)); // any string sent as parameter
-// Array 
-let fruits = ["apple", "banana", "orange"];
-fruits.push("Pineapple"); //If I sent number here TS will detect error
-console.log(fruits);
-let mixed = [46, "Akash", "Batash", true, { ok: "hello" }];
-mixed.push("ok");
-mixed.push({
-    ok: "fine"
-});
-console.log(mixed);
-// Object
-let person = {
-    name: "Shakib Al Hasan",
-    age: 35,
-    isCaptain: true
+// Explicit Declearation of type in variable.
+let a;
+let b;
+a = "Akash Kumar Saha";
+b = 56;
+let x;
+x = true;
+// For array
+let arr = [23, 12, 12, 121, 1];
+arr.push(6);
+arr.push("Akash");
+// arr.push(true) Error will shown
+console.log(arr);
+// For object
+let myObject;
+myObject = {
+    name: "Akash",
+    age: 26,
 };
-person.name = "Virat Kholi";
+console.log(myObject);
+// If I want a object follow a specific structure then 
+let myObject2;
+myObject2 = {
+    name: "Akash Kumar Saha",
+    age: 22,
+    isAdult: true,
+};
+// Exception in javascript array is an object so,
+let myObjArray;
+myObjArray = [213, 213, 12, 12];
+console.log(myObjArray);
