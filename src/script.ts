@@ -1,18 +1,51 @@
-// Custom type is called type alias in TS
+// Learn about function signature
 
-type stringOrNum = string | number
-type userType = {
+let newVar: string;
+
+newVar = "Akash"
+
+
+let add: (x: number, y: number) => number;  //this is the signature part of a function
+
+
+add = (a: number, b: number) => {
+
+    return a + b;
+}
+
+console.log(add(2, 3))
+
+
+
+let calculation: (x: number, y: number, z: string) => number;
+
+
+calculation = (a: number, b: number, c: string) => {
+    if (c === "add") {
+        return a + b;
+    }
+
+    else {
+        return a - b;
+    }
+}
+
+
+console.log(calculation(23, 23, "add"))
+
+
+
+let userDetails: (id: number | string, userInfo: {
     name: string,
     age: number,
-}
+    isAdult: boolean,
+}) => number;
 
-const userdetails = (
-    id: stringOrNum,
-    user: userType,
-) : void => {
-    console.log (`User Id is ${id}, name is ${user.name} and age is ${user.age}`)
-}
 
-const sayHello = (user: userType) => {
-    console.log (`Hello ${user.age>50 ? "Sir" : "Mr."} ${user.name}`)
+userDetails = (nid: number | string, userInformation: {
+    name: string,
+    age: number,
+    isAdult: boolean,
+}) => {
+    return 0;
 }

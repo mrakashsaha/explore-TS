@@ -1,8 +1,23 @@
 "use strict";
-// Custom type is called type alias in TS
-const userdetails = (id, user) => {
-    console.log(`User Id is ${id}, name is ${user.name} and age is ${user.age}`);
+// Learn about function signature
+let newVar;
+newVar = "Akash";
+let add; //this is the signature part of a function
+add = (a, b) => {
+    return a + b;
 };
-const sayHello = (user) => {
-    console.log(`Hello ${user.age > 50 ? "Sir" : "Mr."} ${user.name}`);
+console.log(add(2, 3));
+let calculation;
+calculation = (a, b, c) => {
+    if (c === "add") {
+        return a + b;
+    }
+    else {
+        return a - b;
+    }
+};
+console.log(calculation(23, 23, "add"));
+let userDetails;
+userDetails = (nid, userInformation) => {
+    return 0;
 };
