@@ -1,7 +1,8 @@
-class Player {
-    name: string;
-    age: number;
-    country: string;
+/*
+class PlayerX {
+    private name: string;
+    readonly age: number;
+    public country: string;
 
     constructor (n:string, a: number, c: string) {
         this.name = n;
@@ -16,17 +17,28 @@ class Player {
 }
 
 
-const player1 = new Player("Akash", 54, "BD");
-const player2 = new Player("Priyanka", 54, "BD");
-
-player1.play();
-player2.play();
-
-const players : Player [] = [];
-
-players.push(player1)
-players.push(player2)
-
-console.log(players)
+const playerX1 = new PlayerX("Akash", 54, "BD");
+const playerX2 = new PlayerX("Priyanka", 54, "BD");
 
 
+const playersX : PlayerX [] = [];
+
+console.log(playerX1.name)
+
+*/
+
+
+class MyPlayer {
+    constructor (
+        public name : string,
+        private age: number,
+        readonly country: string,
+    ) {}
+}
+
+
+const myp1 = new MyPlayer ("Akash", 45, "Bangladesh")
+
+console.log(myp1.name);
+console.log(myp1.age);  //beacuse private we can't show this outside of the class
+console.log(myp1.country)  // we can show beccause it is only readonly but cannot change the value outside of the class
