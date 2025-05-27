@@ -8,6 +8,9 @@ drawRactrangle({width: 46, length: 546})
 
 */
 
+import { Virat } from "./classes/Virat";
+import { IsPlayer } from "./interface/isPlayer";
+
 // Above task we can do with interface.
 
 interface RectangleOptions {
@@ -33,3 +36,8 @@ drawRactrangle ({
 
 
 
+let v1 : IsPlayer;
+
+v1 = new Virat("akash", 45, "India")
+
+console.log(v1.country)
