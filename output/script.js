@@ -9,4 +9,23 @@ const addId = (obj) => {
 const user = { name: "Akash", age: 46 };
 addId(user);
 console.log(addId(user));
-// Use of Generic in interface
+const response1 = {
+    status: 200,
+    type: 1,
+    data: { name: "Cooling fan", price: 200 }
+};
+// ENUM Types optional type
+var RType;
+(function (RType) {
+    RType[RType["SUCCESS"] = 0] = "SUCCESS";
+    RType[RType["FAILED"] = 1] = "FAILED";
+    RType[RType["UNAUTHINCATED"] = 2] = "UNAUTHINCATED";
+    RType[RType["FORBIDDEN"] = 3] = "FORBIDDEN";
+})(RType || (RType = {}));
+;
+const response2 = {
+    status: 200,
+    type: RType.FAILED,
+    data: { name: "Fridge", price: 56 }
+};
+console.log(response2);
