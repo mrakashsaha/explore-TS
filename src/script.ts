@@ -1,43 +1,24 @@
-/*function drawRactrangle (options : {width: number, length:number}) {
-    let width = options.width;
-    let length = options.length;
-}
+// Generics reuseable block of code which can be used as type
 
-
-drawRactrangle({width: 46, length: 546})
-
-*/
-
-import { Virat } from "./classes/Virat";
-import { IsPlayer } from "./interface/isPlayer";
-
-// Above task we can do with interface.
-
-interface RectangleOptions {
-    width: number,
-    length: number,
-    height: number,
-}
-
-
-function drawRactrangle (options : RectangleOptions) {
-    let width = options.width;
-    let length = options.length;
+const addId = <T extends {name: string;age: number;}> (obj: T) => {
+    let id : number = Math.floor(Math.random()*100);
+    return {...obj, id}
 }
 
 
 
-
-drawRactrangle ({
-    width: 40, 
-    height: 20,
-    length: 40,
-})
+// let user = addId ({name: "Akash Kumar Saha", age: 45});
+// let user2 = addId ({name: "Priyanka Acharjee", age: 56});
 
 
+const user = {name: "Akash", age: 46}
 
-let v1 : IsPlayer;
+addId(user)
 
-v1 = new Virat("akash", 45, "India")
+console.log(addId(user))
 
-console.log(v1.country)
+
+
+// Use of Generic in interface
+
+
